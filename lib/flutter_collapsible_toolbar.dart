@@ -13,7 +13,8 @@ class CollapsibleToolbar extends StatefulWidget {
   CollapsibleToolbar({
     Key key,
     @required this.statusBarHeight,
-    @required this.screenWidth, this.listWidgets,
+    @required this.screenWidth,
+    @required this.listWidgets,
     @required this.carouselImages,
     @required this.appBarLabel
   }) : super(key: key);
