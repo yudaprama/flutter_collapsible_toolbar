@@ -7,6 +7,7 @@ class CollapsibleToolbar extends StatefulWidget {
   final double statusBarHeight;
   final double screenWidth;
   final String appBarLabel;
+  final boxFit;
   final List<Widget> listWidgets;
   final List<Map> carouselImages;
 
@@ -16,7 +17,8 @@ class CollapsibleToolbar extends StatefulWidget {
     @required this.screenWidth,
     @required this.listWidgets,
     @required this.carouselImages,
-    @required this.appBarLabel
+    @required this.appBarLabel,
+	  this.boxFit
   }) : super(key: key);
 
   @override
@@ -53,7 +55,7 @@ class _CollapsibleToolbarState extends State<CollapsibleToolbar> {
             slivers: <Widget>[
               SliverAppBar(
                 pinned: true,
-                backgroundColor: Color.fromRGBO(23,47,49, 1.0),
+                backgroundColor: Colors.white,
                 expandedHeight: expandedHeight,
                 flexibleSpace: LayoutBuilder(
                   builder: (BuildContext context, BoxConstraints constraints) {
@@ -80,6 +82,7 @@ class _CollapsibleToolbarState extends State<CollapsibleToolbar> {
                         child: Carousel(
                           dotBgColor: Colors.transparent,
                           images: widget.carouselImages,
+	                        boxFit: widget.boxFit,
                         )
                       ),
                     );
