@@ -55,7 +55,6 @@ class _CollapsibleToolbarState extends State<CollapsibleToolbar> {
             slivers: <Widget>[
               SliverAppBar(
                 pinned: true,
-                backgroundColor: Colors.white,
                 expandedHeight: expandedHeight,
                 flexibleSpace: LayoutBuilder(
                   builder: (BuildContext context, BoxConstraints constraints) {
